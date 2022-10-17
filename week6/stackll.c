@@ -89,7 +89,7 @@ struct stack* pop(struct stack **front) {
   if (*front != NULL) {  
     temp = (*front);
     *front = (*front)->next;
-    temp -> next = NULL;
+    temp->next = NULL;
   }
   return temp;  
 }
