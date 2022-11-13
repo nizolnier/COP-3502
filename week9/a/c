@@ -1,0 +1,14 @@
+int min;
+for(int s = 0; s < SIZE - 1; s++) {
+    min = arr[s];
+
+    for(int t = s+1; t < SIZE; t++) {
+        if(min > arr[t]) {
+            min = arr[t];
+        }
+    }
+    
+    int temp = arr[s];
+    arr[s] = arr[t];
+    arr[t] = temp;
+}
