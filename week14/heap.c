@@ -161,12 +161,9 @@ void heapify(struct heapStruct *h) {
 
 // Runs percolate down on the heap pointed to by h on the node stored in index.
 void percolateDown(struct heapStruct *h, int index) {
-
     int min;
-
     // Only try to percolate down internal nodes.
     if ((2*index+1) <= h->size) {
-
         // Find the minimum value of the two children of this node.
         min = minimum(h->heaparray[2*index], 2*index, h->heaparray[2*index+1], 2*index+1);
 
@@ -180,10 +177,8 @@ void percolateDown(struct heapStruct *h, int index) {
             percolateDown(h, min);
         }
     }
-
     // Case where our current element has exactly one child, a left child.
     else if (h->size == 2*index) {
-
         // Here we only compare the current item to its only child.
         // Clearly, no recursive call is needed since the child of this node
         // is a leaf.
